@@ -19,7 +19,7 @@ public class Freshman extends Student {
 
     @Override //overrides abstract method from Human
     public String toString() {
-        return "Freshman: Name = '" + getName() + "', Age = " + getAge() + ", GPA = " + getGPA() + ", Credits = " + getCredits();
+        return "Freshman: Name = '" + getName() + "', Age = " + getAge() + ", GPA = " + getGPA() + ", Credits = " + getCredits(); //returns this format when Freshman object is called in MainClass.java
     }
 
     @Override //overrides abstract method from Human
