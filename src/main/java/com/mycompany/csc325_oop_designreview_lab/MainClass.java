@@ -12,43 +12,43 @@ import java.util.Scanner;
 public class MainClass {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); //creates object of Scanner class to recieve user input
 
-		System.out.println("Enter first name for Freshman: ");
-		String name = sc.nextLine();
+		System.out.println("Enter first name for Freshman: "); //prompts user to enter Freshman name
+		String name = sc.nextLine(); //allows user input for name String
 
-		System.out.println("Enter age for Freshman: ");
-		short age = sc.nextShort();
+		System.out.println("Enter age for Freshman: "); //prompts user to enter Freshman age
+		short age = sc.nextShort(); //allows user input for age
 
-		System.out.println("Enter GPA for Freshman: ");
-		double GPA = sc.nextDouble();
+		System.out.println("Enter GPA for Freshman: "); //prompts user to enter Freshman GPA
+		double GPA = sc.nextDouble(); //allows user input for GPA
 
-		System.out.println("Enter credits for Freshman: ");
-		int credits = sc.nextInt();
+		System.out.println("Enter credits for Freshman: "); //prompts user to enter Freshman credits
+		int credits = sc.nextInt(); //allows user input for credits
 
-		Freshman freshman = new Freshman(name, age, GPA, credits); // name, age, credits
+		Freshman freshman = new Freshman(name, age, GPA, credits); // object of Freshman class that takes in name, age, GPA, and credits as parameters
 
 
-		System.out.println("Enter first name for Senior: ");
+		System.out.println("Enter first name for Senior: ");  //prompts user to enter Senior name
 		sc.nextLine();
-		name = sc.nextLine();
+		name = sc.nextLine(); //allows user input for name String
 
-		System.out.println("Enter age for Senior: ");
-		age = sc.nextShort();
+		System.out.println("Enter age for Senior: ");  //prompts user to enter Senior age
+		age = sc.nextShort(); //allows user input for age
 
-		System.out.println("Enter GPA for Senior: ");
-		GPA = sc.nextDouble();
+		System.out.println("Enter GPA for Senior: "); //prompts user to enter Senior GPA
+		GPA = sc.nextDouble(); //allows user input for GPA
 
-		System.out.println("Enter credits for Senior: ");
-		int seniorCredits = sc.nextInt();
+		System.out.println("Enter credits for Senior: "); //prompts user to enter Senior credits
+		int seniorCredits = sc.nextInt(); //allows user input for credits
 
 		if (seniorCredits >= 85) {
 			System.out.println("Senior must have at least 85 credits");
 		}
 
-		Senior senior = new Senior(name, age, GPA, seniorCredits);
-		System.out.println(freshman);
-		System.out.println(senior);
+		Senior senior = new Senior(name, age, GPA, seniorCredits); // object of Senior class that takes in name, age, GPA, and seniorCredits as parameters
+		System.out.println(freshman); //outputs Freshman credentials
+		System.out.println(senior); //outputs Senior credentials
 
 	}
 
