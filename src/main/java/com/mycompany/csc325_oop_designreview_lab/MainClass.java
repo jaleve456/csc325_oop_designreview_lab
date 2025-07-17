@@ -1,8 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.csc325_oop_designreview_lab;
+import java.util.Scanner;
+
 
 /**
  *
@@ -10,35 +11,60 @@ package com.mycompany.csc325_oop_designreview_lab;
  */
 public class MainClass {
 
- public static void main(String[] args) {
-		// ToDo 5: Fix the error
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
-		// ToDo 6: Fix the constructor of the Student class
+		System.out.println("Enter first name for Freshman: ");
+		String name = sc.nextLine();
 
-                // Todo 7: Create two classes for Freshman and Senior 
+		System.out.println("Enter age for Freshman: ");
+		short age = sc.nextShort();
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+		System.out.println("Enter GPA for Freshman: ");
+		double GPA = sc.nextDouble();
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
+		System.out.println("Enter credits for Freshman: ");
+		int credits = sc.nextInt();
 
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
+		Freshman freshman = new Freshman(name, age, GPA, credits); // name, age, credits
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
 
-                Senior std2 = new Student("John", 30, 90);
+		System.out.println("Enter first name for Senior: ");
+		sc.nextLine();
+		name = sc.nextLine();
 
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
+		System.out.println("Enter age for Senior: ");
+		age = sc.nextShort();
 
-		System.out.println(std1);
+		System.out.println("Enter GPA for Senior: ");
+		GPA = sc.nextDouble();
 
-                System.out.println(std2);
+		System.out.println("Enter credits for Senior: ");
+		int seniorCredits = sc.nextInt();
 
-		// ToDo 13: add comments and explain your code
+		if (seniorCredits >= 85) {
+			System.out.println("Senior must have at least 85 credits");
+		}
+
+		Senior senior = new Senior(name, age, GPA, seniorCredits);
+		System.out.println(freshman);
+		System.out.println(senior);
 
 	}
 
 }
+//Self checklist //
+// ToDo 5: Fix the error
 
+// ToDo 6: Fix the constructor of the Student class
+
+// Todo 7: Create two classes for Freshman and Senior
+
+// ToDo 8: The senior class should have a minimum of 85 credits
+
+// ToDo 9: Add a toString method for the Student class
+// ToDo 10: Add a toString method for the Freshman class
+// ToDo 11: Add a toString method for the Senior class
+// ToDo 12: Set the gpa of the student using the scanner and user
+// 			input and then print the output.
+// ToDo 13: add comments and explain your code
