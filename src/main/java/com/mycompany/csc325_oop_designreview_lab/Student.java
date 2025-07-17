@@ -8,12 +8,12 @@ package com.mycompany.csc325_oop_designreview_lab;
  *
  * @author MoaathAlrajab
  */
-public abstract class Student extends Human {
+public abstract class Student extends Human { //inherits traits from Human class
     private double GPA; //private keyword represents attribute with restricted access
 
     public Student(String name, short age, double GPA) { //constructor for student class
-        super(name,age);
-        this.GPA = GPA;
+        super(name,age); //gets name and age attribute from Student superclass
+        this.GPA = GPA; //defines the GPA value within this specific file
     }
 
     public double getGPA() { //getter method for GPA
@@ -23,7 +23,7 @@ public abstract class Student extends Human {
         this.GPA = GPA;
     }
     @Override
-    public String toString() {
+    public String toString() { //method that generates text representation of java class
         return "Student{Name='" + getName() + "', Age=" + getAge() + ", GPA=" + GPA + "}";
     }
 
